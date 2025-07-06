@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -22,12 +21,10 @@ namespace CoffeeCafeProject
         {
             MessageBox.Show(msg, "คำเตือน", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
-
-
         private void getAllMenuToListView()
         {
             //กำหนด connection string เพื่อติดต่อไปยัง Database
-            string connectionString = @"MSI\SQLEXPRESS;Database=coffee_cafe_db;trusted_Connection=True;";
+            string connectionString = @"Server=MSI\SQLEXPRESS;Database=coffee_cafe_db;trusted_Connection=True;";
 
             //สร้าง connection
             using (SqlConnection sqlConnection = new SqlConnection(connectionString))
@@ -75,6 +72,17 @@ namespace CoffeeCafeProject
             }
         }
 
+        private void FrmMember_Load(object sender, EventArgs e)
+        {
+            tbMemberId.Clear();
+            tbMemberPhone.Clear();
+            tbMemberName.Clear();
+            btSave.Enabled = true;
+            btUpdate.Enabled = false;
+            btDelete.Enabled = false;
+            getAllMenuToListView();
+        }
+
         private void btSave_Click(object sender, EventArgs e)
         {
             if (tbMemberPhone.Text.Length == 0)
@@ -89,7 +97,7 @@ namespace CoffeeCafeProject
             {
                 //บันทึกลง db
 
-                string connectionString = @"MSI\SQLEXPRESS;Database=coffee_cafe_db;trusted_Connection=True;";
+                string connectionString = @"Server=MSI\SQLEXPRESS;Database=coffee_cafe_db;trusted_Connection=True;";
 
                 //สร้าง connection
                 using (SqlConnection sqlConnection = new SqlConnection(connectionString))
@@ -132,8 +140,6 @@ namespace CoffeeCafeProject
             }
         }
 
-
-
         private void btUpdate_Click(object sender, EventArgs e)
         {
             if (tbMemberPhone.Text.Length == 0)
@@ -146,7 +152,7 @@ namespace CoffeeCafeProject
             }
 
 
-            string connectionString = @"MSI\SQLEXPRESS;Database=coffee_cafe_db;trusted_Connection=True;";
+            string connectionString = @"Server=MSI\SQLEXPRESS;Database=coffee_cafe_db;trusted_Connection=True;";
 
             using (SqlConnection sqlConnection = new SqlConnection(connectionString))
             {
@@ -159,7 +165,7 @@ namespace CoffeeCafeProject
                     SqlTransaction sqlTransaction = sqlConnection.BeginTransaction();
                     string strSQL = "UPDATE member_tb " +
                                     "SET memberPhone = @memberPhone, " +
-                                    "memberName= @memberName" +
+                                    "memberName = @memberName " +
                                     "WHERE memberId = @memberId";
 
 
@@ -199,12 +205,11 @@ namespace CoffeeCafeProject
             }
         }
 
-
         private void btDelete_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("ต้องการลบหรือไม่", "ยืนยัน", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                string connectionString = @"MSI\SQLEXPRESS;Database=coffee_cafe_db;trusted_Connection=True;";
+                string connectionString = @"Server=MSI\SQLEXPRESS;Database=coffee_cafe_db;trusted_Connection=True;";
                 using (SqlConnection sqlConnection = new SqlConnection(connectionString))
                 {
                     try
@@ -261,17 +266,6 @@ namespace CoffeeCafeProject
             this.Close();
         }
 
-        private void FrmMember_Load(object sender, EventArgs e)
-        {
-            tbMemberId.Clear();
-            tbMemberPhone.Clear();
-            tbMemberName.Clear();
-            btSave.Enabled = true;
-            btUpdate.Enabled = false;
-            btDelete.Enabled = false;
-            getAllMenuToListView();
-        }
-
         private void lvShowAllMember_ItemActivate(object sender, EventArgs e)
         {
             var item = lvShowAllMember.SelectedItems[0];
@@ -295,6 +289,17 @@ namespace CoffeeCafeProject
             {
                 e.Handled = true;
             }
+        }
+
+        private void tbMemberPhone_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            // อนุญาตเฉพาะตัวเลข, จุดทศนิยม (.) และ Backspace
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '.')
+            {
+                e.Handled = true;
+            }
+
+           
         }
     }
 }

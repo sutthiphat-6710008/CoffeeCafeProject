@@ -251,21 +251,172 @@ namespace CoffeeCafeProject
             }
         }
 
+        //private void btClose_Click(object sender, EventArgs e)
+        //{
+        //    this.Close();
+        //}
+
+        //private void btCancel_Click(object sender, EventArgs e)
+        //{
+
+        //}
+
+       
+
+        //private void btDelete_Click(object sender, EventArgs e)
+        //{
+        //    if (MessageBox.Show("ต้องการลบหรือไม่", "ยืนยัน", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+        //    {
+        //        string connectionString = @"Server=MSI\SQLEXPRESS;Database=coffee_cafe_db;trusted_Connection=True;";
+        //        using (SqlConnection sqlConnection = new SqlConnection(connectionString))
+        //        {
+        //            try
+        //            {
+        //                sqlConnection.Open();
+        //                SqlTransaction sqlTransaction = sqlConnection.BeginTransaction();
+
+        //                string deleteSQL = "DELETE FROM menu_tb WHERE menuId = @menuId";
+
+        //                using (SqlCommand command = new SqlCommand(deleteSQL, sqlConnection, sqlTransaction))
+        //                {
+        //                    command.Parameters.AddWithValue("@menuId", int.Parse(tbMenuId.Text));
+
+        //                    int rowsAffected = command.ExecuteNonQuery();
+        //                    sqlTransaction.Commit();
+
+        //                    if (rowsAffected > 0)
+        //                    {
+        //                        MessageBox.Show("ลบข้อมูลสำเร็จ");
+        //                        pbMenuImage.Image = null;
+        //                        pbMenuImage.Image = null;
+        //                        tbMenuId.Clear();
+        //                        tbMenuName.Clear();
+        //                        tbMenuPrice.Clear();
+        //                        btSave.Enabled = true;
+        //                        btUpdate.Enabled = false;
+        //                        btDelete.Enabled = false;
+        //                        getAllMenuToListView();
+        //                    }
+        //                    else
+        //                    {
+        //                        MessageBox.Show("ไม่พบข้อมูลที่จะลบ");
+        //                    }
+        //                }
+        //            }
+        //            catch (Exception ex)
+        //            {
+        //                MessageBox.Show("พบข้อผิดพลาด: " + ex.Message);
+        //            }
+        //        }
+        //    }
+
+        //}
+
+
+        //private void btUpdate_Click(object sender, EventArgs e)
+        //{
+        //    if (tbMenuName.Text.Length == 0)
+        //    {
+        //        alertValidate("กรุณาป้อนชื่อเมนู");
+        //        return;
+        //    }
+        //    if (tbMenuPrice.Text.Length == 0)
+        //    {
+        //        alertValidate("กรุณาป้อนราคาเมนู");
+        //        return;
+        //    }
+        //    if (!float.TryParse(tbMenuPrice.Text, out float price))
+        //    {
+        //        alertValidate("กรุณาป้อนราคาที่ถูกต้อง");
+        //        return;
+        //    }
+        //    if (tbMenuId.Text.Length == 0)
+        //    {
+        //        alertValidate("กรุณาป้อนรหัสเมนู");
+        //        return;
+        //    }
+
+        //    string connectionString = @"Server=MSI\SQLEXPRESS;Database=coffee_cafe_db;trusted_Connection=True;";
+
+        //    using (SqlConnection sqlConnection = new SqlConnection(connectionString))
+        //    {
+        //        try
+        //        {
+        //            sqlConnection.Open();
+
+        //            // เช็คว่าภาพเดิมมีอยู่หรือไม่
+        //            string checkImageSql = "SELECT menuImage FROM menu_tb WHERE menuId = @menuId";
+        //            byte[] existingImage = null;
+        //            using (SqlCommand checkCmd = new SqlCommand(checkImageSql, sqlConnection))
+        //            {
+        //                checkCmd.Parameters.Add("@menuId", SqlDbType.Int).Value = int.Parse(tbMenuId.Text);
+        //                object result = checkCmd.ExecuteScalar();
+        //                if (result != DBNull.Value && result != null)
+        //                {
+        //                    existingImage = (byte[])result;
+        //                }
+        //            }
+
+        //            // ถ้าไม่มีภาพใหม่และไม่มีภาพเก่า แจ้งเตือน
+        //            if (menuImage == null && existingImage == null)
+        //            {
+        //                alertValidate("กรุณาเลือกภาพเมนู");
+        //                return;
+        //            }
+
+        //            byte[] imageToSave = menuImage ?? existingImage;
+
+        //            SqlTransaction sqlTransaction = sqlConnection.BeginTransaction();
+
+        //            string strSQL = "UPDATE menu_tb " +
+        //                            "SET menuName = @menuName, " +
+        //                            "menuPrice = @menuPrice, " +
+        //                            "menuImage = @menuImage " +
+        //                            "WHERE menuId = @menuId";
+
+        //            using (SqlCommand command = new SqlCommand(strSQL, sqlConnection, sqlTransaction))
+        //            {
+        //                command.Parameters.Add("@menuName", SqlDbType.NVarChar, 100).Value = tbMenuName.Text;
+        //                command.Parameters.Add("@menuPrice", SqlDbType.Float).Value = price;
+        //                command.Parameters.Add("@menuImage", SqlDbType.Image).Value = imageToSave;
+        //                command.Parameters.Add("@menuId", SqlDbType.Int).Value = int.Parse(tbMenuId.Text);
+
+        //                int rowsAffected = command.ExecuteNonQuery();
+        //                sqlTransaction.Commit();
+
+        //                if (rowsAffected > 0)
+        //                {
+        //                    MessageBox.Show("อัปเดตข้อมูลสำเร็จ");
+
+        //                    pbMenuImage.Image = null;
+        //                    tbMenuId.Clear();
+        //                    tbMenuName.Clear();
+        //                    tbMenuPrice.Clear();
+        //                    btSave.Enabled = true;
+        //                    btUpdate.Enabled = false;
+        //                    btDelete.Enabled = false;
+        //                    getAllMenuToListView();
+
+        //                    // รีเซ็ตตัวแปรภาพใหม่
+        //                    menuImage = null;
+        //                }
+        //                else
+        //                {
+        //                    MessageBox.Show("ไม่พบข้อมูลที่จะอัปเดต");
+        //                }
+        //            }
+        //        }
+        //        catch (Exception ex)
+        //        {
+        //            MessageBox.Show("พบข้อผิดพลาด :" + ex.Message);
+        //        }
+        //    }
+        //}
+
+
         private void btClose_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void btCancel_Click(object sender, EventArgs e)
-        {
-            pbMenuImage.Image = null;
-            tbMenuId.Clear();
-            tbMenuName.Clear();
-            tbMenuPrice.Clear();
-            btSave.Enabled = true;
-            btUpdate.Enabled = false;
-            btDelete.Enabled = false;
-            getAllMenuToListView();
         }
 
         private void lvShowAllMenu_ItemActivate(object sender, EventArgs e)
@@ -285,7 +436,14 @@ namespace CoffeeCafeProject
             btSave.Enabled = false;
             btUpdate.Enabled = true;
             btDelete.Enabled = true;
+        }
 
+        private void btCancel_Click(object sender, EventArgs e)
+        {
+            pbMenuImage.Image = null;
+            tbMenuId.Clear();
+            tbMenuName.Clear();
+            tbMenuPrice.Clear();
         }
 
         private void btDelete_Click(object sender, EventArgs e)
@@ -334,9 +492,7 @@ namespace CoffeeCafeProject
                     }
                 }
             }
-
         }
-
 
         private void btUpdate_Click(object sender, EventArgs e)
         {
@@ -437,6 +593,5 @@ namespace CoffeeCafeProject
                 }
             }
         }
-
     }
 }
