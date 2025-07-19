@@ -1,0 +1,39 @@
+C:\sau2567\nin_summer_dti\coffee_org\CoffeeCafeProject\CoffeeCafeProject\obj\Debug\CoffeeCafeProject.csproj.AssemblyReference.cache
+C:\sau2567\nin_summer_dti\coffee_org\CoffeeCafeProject\CoffeeCafeProject\obj\Debug\CoffeeCafeProject.FrmMenu.resources
+C:\sau2567\nin_summer_dti\coffee_org\CoffeeCafeProject\CoffeeCafeProject\obj\Debug\CoffeeCafeProject.FrmMain.resources
+C:\sau2567\nin_summer_dti\coffee_org\CoffeeCafeProject\CoffeeCafeProject\obj\Debug\CoffeeCafeProject.FrmMember.resources
+C:\sau2567\nin_summer_dti\coffee_org\CoffeeCafeProject\CoffeeCafeProject\obj\Debug\CoffeeCafeProject.Properties.Resources.resources
+C:\sau2567\nin_summer_dti\coffee_org\CoffeeCafeProject\CoffeeCafeProject\obj\Debug\CoffeeCafeProject.csproj.GenerateResource.cache
+C:\sau2567\nin_summer_dti\coffee_org\CoffeeCafeProject\CoffeeCafeProject\obj\Debug\CoffeeCafeProject.csproj.CoreCompileInputs.cache
+C:\sau2567\nin_summer_dti\coffee_org\CoffeeCafeProject\CoffeeCafeProject\bin\Debug\CoffeeCafeProject.exe.config
+C:\sau2567\nin_summer_dti\coffee_org\CoffeeCafeProject\CoffeeCafeProject\bin\Debug\CoffeeCafeProject.exe
+C:\sau2567\nin_summer_dti\coffee_org\CoffeeCafeProject\CoffeeCafeProject\bin\Debug\CoffeeCafeProject.pdb
+C:\sau2567\nin_summer_dti\coffee_org\CoffeeCafeProject\CoffeeCafeProject\obj\Debug\CoffeeCafeProject.exe
+C:\sau2567\nin_summer_dti\coffee_org\CoffeeCafeProject\CoffeeCafeProject\obj\Debug\CoffeeCafeProject.pdb
+C:\sau2567\nin_summer_dti\coffee_org\CoffeeCafeProject\CoffeeCafeProject\obj\Debug\CoffeeCafeProject.exe.config
+C:\Users\opzza\OneDrive\Desktop\New folder\CoffeeCafeProject\CoffeeCafeProject\bin\Debug\CoffeeCafeProject.exe.config
+C:\Users\opzza\OneDrive\Desktop\New folder\CoffeeCafeProject\CoffeeCafeProject\bin\Debug\CoffeeCafeProject.exe
+C:\Users\opzza\OneDrive\Desktop\New folder\CoffeeCafeProject\CoffeeCafeProject\bin\Debug\CoffeeCafeProject.pdb
+C:\Users\opzza\OneDrive\Desktop\New folder\CoffeeCafeProject\CoffeeCafeProject\obj\Debug\CoffeeCafeProject.csproj.AssemblyReference.cache
+C:\Users\opzza\OneDrive\Desktop\New folder\CoffeeCafeProject\CoffeeCafeProject\obj\Debug\CoffeeCafeProject.exe.config
+C:\Users\opzza\OneDrive\Desktop\New folder\CoffeeCafeProject\CoffeeCafeProject\obj\Debug\CoffeeCafeProject.FrmMenu.resources
+C:\Users\opzza\OneDrive\Desktop\New folder\CoffeeCafeProject\CoffeeCafeProject\obj\Debug\CoffeeCafeProject.FrmMain.resources
+C:\Users\opzza\OneDrive\Desktop\New folder\CoffeeCafeProject\CoffeeCafeProject\obj\Debug\CoffeeCafeProject.FrmMember.resources
+C:\Users\opzza\OneDrive\Desktop\New folder\CoffeeCafeProject\CoffeeCafeProject\obj\Debug\CoffeeCafeProject.Properties.Resources.resources
+C:\Users\opzza\OneDrive\Desktop\New folder\CoffeeCafeProject\CoffeeCafeProject\obj\Debug\CoffeeCafeProject.csproj.GenerateResource.cache
+C:\Users\opzza\OneDrive\Desktop\New folder\CoffeeCafeProject\CoffeeCafeProject\obj\Debug\CoffeeCafeProject.csproj.CoreCompileInputs.cache
+C:\Users\opzza\OneDrive\Desktop\New folder\CoffeeCafeProject\CoffeeCafeProject\obj\Debug\CoffeeCafeProject.exe
+C:\Users\opzza\OneDrive\Desktop\New folder\CoffeeCafeProject\CoffeeCafeProject\obj\Debug\CoffeeCafeProject.pdb
+C:\sutthiphat4\CoffeeCafeProject\CoffeeCafeProject\bin\Debug\CoffeeCafeProject.exe.config
+C:\sutthiphat4\CoffeeCafeProject\CoffeeCafeProject\bin\Debug\CoffeeCafeProject.exe
+C:\sutthiphat4\CoffeeCafeProject\CoffeeCafeProject\bin\Debug\CoffeeCafeProject.pdb
+C:\sutthiphat4\CoffeeCafeProject\CoffeeCafeProject\obj\Debug\CoffeeCafeProject.csproj.AssemblyReference.cache
+C:\sutthiphat4\CoffeeCafeProject\CoffeeCafeProject\obj\Debug\CoffeeCafeProject.exe.config
+C:\sutthiphat4\CoffeeCafeProject\CoffeeCafeProject\obj\Debug\CoffeeCafeProject.FrmMenu.resources
+C:\sutthiphat4\CoffeeCafeProject\CoffeeCafeProject\obj\Debug\CoffeeCafeProject.FrmMain.resources
+C:\sutthiphat4\CoffeeCafeProject\CoffeeCafeProject\obj\Debug\CoffeeCafeProject.FrmMember.resources
+C:\sutthiphat4\CoffeeCafeProject\CoffeeCafeProject\obj\Debug\CoffeeCafeProject.Properties.Resources.resources
+C:\sutthiphat4\CoffeeCafeProject\CoffeeCafeProject\obj\Debug\CoffeeCafeProject.csproj.GenerateResource.cache
+C:\sutthiphat4\CoffeeCafeProject\CoffeeCafeProject\obj\Debug\CoffeeCafeProject.csproj.CoreCompileInputs.cache
+C:\sutthiphat4\CoffeeCafeProject\CoffeeCafeProject\obj\Debug\CoffeeCafeProject.exe
+C:\sutthiphat4\CoffeeCafeProject\CoffeeCafeProject\obj\Debug\CoffeeCafeProject.pdb

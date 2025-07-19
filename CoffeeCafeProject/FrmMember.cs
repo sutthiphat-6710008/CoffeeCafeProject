@@ -24,10 +24,10 @@ namespace CoffeeCafeProject
         private void getAllMenuToListView()
         {
             //กำหนด connection string เพื่อติดต่อไปยัง Database
-            string connectionString = @"Server=MSI\SQLEXPRESS;Database=coffee_cafe_db;trusted_Connection=True;";
+            // string connectionString = @"Server=MSI\SQLEXPRESS;Database=coffee_cafe_db;Trusted_Connection=True;";
 
             //สร้าง connection
-            using (SqlConnection sqlConnection = new SqlConnection(connectionString))
+            using (SqlConnection sqlConnection = new SqlConnection(ShareResource.connectionString))
             {
                 try
                 {
@@ -97,10 +97,10 @@ namespace CoffeeCafeProject
             {
                 //บันทึกลง db
 
-                string connectionString = @"Server=MSI\SQLEXPRESS;Database=coffee_cafe_db;trusted_Connection=True;";
+                // string connectionString = @"Server=MSI\SQLEXPRESS;Database=coffee_cafe_db;Trusted_Connection=True;";
 
                 //สร้าง connection
-                using (SqlConnection sqlConnection = new SqlConnection(connectionString))
+                using (SqlConnection sqlConnection = new SqlConnection(ShareResource.connectionString))
                     try
                     {
                         sqlConnection.Open();
@@ -152,9 +152,9 @@ namespace CoffeeCafeProject
             }
 
 
-            string connectionString = @"Server=MSI\SQLEXPRESS;Database=coffee_cafe_db;trusted_Connection=True;";
+            // string connectionString = @"Server=MSI\SQLEXPRESS;Database=coffee_cafe_db;Trusted_Connection=True;";
 
-            using (SqlConnection sqlConnection = new SqlConnection(connectionString))
+            using (SqlConnection sqlConnection = new SqlConnection(ShareResource.connectionString))
             {
                 try
                 {
@@ -209,8 +209,8 @@ namespace CoffeeCafeProject
         {
             if (MessageBox.Show("ต้องการลบหรือไม่", "ยืนยัน", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                string connectionString = @"Server=MSI\SQLEXPRESS;Database=coffee_cafe_db;trusted_Connection=True;";
-                using (SqlConnection sqlConnection = new SqlConnection(connectionString))
+                // string connectionString = @"Server=MSI\SQLEXPRESS;Database=coffee_cafe_db;Trusted_Connection=True;";
+                using (SqlConnection sqlConnection = new SqlConnection(ShareResource.connectionString))
                 {
                     try
                     {
